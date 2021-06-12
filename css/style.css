@@ -1,0 +1,450 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: #111318;
+  box-sizing: border-box;
+}
+.wrapper {
+  width: 250px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: black;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+.wrapper ul li a {
+  color: #7e7e7e;
+  transform: translateX(40px);
+  margin-top: 10px;
+  display: block;
+  transition: all 0.3s ease;
+}
+.wrapper ul li:hover a {
+  color: #3deaa4;
+}
+.wrapper ul li::before {
+  content: "";
+  background-color: #3deaa562;
+  width: 0%;
+  height: 25px;
+  margin-top: 7px;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.2s ease;
+}
+.wrapper ul li:hover::before {
+  opacity: 1;
+  width: 30%;
+}
+.copy-right {
+  color: #bebebe;
+  position: absolute;
+  bottom: 0;
+}
+.main-wrapper {
+  width: calc(100% - 250px);
+  max-width: 100%;
+  float: right;
+  position: relative;
+}
+.brand-name {
+  font-size: 30px;
+  width: 200px;
+  color: #3deaa4;
+  transition: 0.3s all ease;
+}
+
+.brand-name::before {
+  content: "";
+  background-color: #3deaa4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  transform: translateX(-20px);
+  width: 1px;
+  z-index: -1;
+  transition: 0.5s ease;
+}
+.brand-name:hover::before {
+  transform: translateX(150px);
+}
+.hireme-btn {
+  background-color: rgba(255, 0, 0, 0);
+  border: 1px solid #3deaa4;
+  font-size: 20px;
+  color: #3deaa4;
+  padding: 5px 10px;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: 0.5s ease;
+}
+.hireme-btn:hover {
+  color: black;
+}
+.hireme-btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #3deaa4;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  width: 100%;
+  height: 0%;
+  z-index: -1;
+  transition: all 0.5s ease;
+}
+.hireme-btn:hover::before {
+  height: 200%;
+}
+.toggler {
+  background-color: rgba(255, 0, 0, 0);
+  border: 1px solid #3deaa4;
+  font-size: 20px;
+  color: #3deaa4;
+  padding: 10px 20px;
+  border-radius: 2px;
+  position: fixed;
+  top: 30px;
+  right: 30px;
+  transition: 0.3s ease;
+  display: none;
+  overflow: hidden;
+  z-index: 2;
+}
+.toggler::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: #3deaa4;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  width: 100%;
+  height: 0%;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+.toggler:hover {
+  color: #111318;
+}
+
+.toggler:hover::before {
+  height: 200%;
+}
+hr {
+  background-color: #4e4e4e;
+}
+.my-image {
+  width: 40%;
+  border: 5px solid;
+  animation: bordertop 2s infinite ease-out;
+}
+@keyframes bordertop {
+  0% {
+    border-top: 5px solid;
+  }
+  15.33% {
+    border-top: 5px solid #3deaa4;
+  }
+  20.66% {
+    border-right: 5px solid #3deaa4;
+  }
+  30% {
+    border-bottom: 5px solid #3deaa4;
+  }
+  60% {
+    border-left: 5px solid #3deaa4;
+  }
+  100% {
+    border-top: 5px solid;
+  }
+}
+.home-heading {
+  font-size: 5vw;
+}
+.fb-ico {
+  color: #3deaa4;
+  transition: all 0.3s;
+}
+.fb-ico:hover {
+  color: #ebebeb;
+  transform: scale(1.7);
+}
+.services-main p {
+  color: #cccccc;
+}
+
+.sev-box strong::before {
+  content: "";
+  position: absolute;
+  margin-top: 15px;
+  height: 15px;
+  width: 0px;
+  background-color: #226950;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.sev-box:hover strong::before {
+  width: 55px;
+}
+.sev-box::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 0px;
+  width: 1px;
+  background-color: #3deaa4;
+  transition: all 0.3s ease;
+}
+.sev-box:hover::before {
+  height: 200px;
+}
+.button {
+  border: none;
+  padding: 10px 20px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 5px;
+  margin: 20px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  transition: all 0.2s ease;
+}
+.button:hover {
+  color: #3deaa4;
+  transform: scale(1.5);
+}
+
+.bar-1 {
+  width: 100%;
+  height: 7px;
+  margin-bottom: 50px;
+  background-color: #3deaa4;
+  animation: bar1 1s ease;
+}
+@keyframes bar1 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.bar-2 {
+  width: 80%;
+  height: 7px;
+  margin-bottom: 50px;
+  background-color: #3deaa4;
+  animation: bar2 1s ease;
+}
+@keyframes bar2 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+.bar-3 {
+  width: 60%;
+  height: 7px;
+  margin-bottom: 50px;
+  background-color: #3deaa4;
+  animation: bar3 1s ease;
+}
+@keyframes bar3 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+.bar-4 {
+  width: 100%;
+  height: 7px;
+  margin-bottom: 50px;
+  background-color: #3deaa4;
+  animation: bar4 1s ease;
+}
+@keyframes bar4 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.bar-5 {
+  width: 90%;
+  height: 7px;
+  margin-bottom: 50px;
+  background-color: #3deaa4;
+  animation: bar5 1s ease;
+}
+@keyframes bar5 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+.bar-6 {
+  width: 60%;
+  height: 7px;
+  margin-bottom: 50px;
+  background-color: #3deaa4;
+  animation: bar6 1s ease;
+}
+@keyframes bar6 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+.bar-7 {
+  width: 95%;
+  height: 7px;
+  margin-bottom: 50px;
+  background-color: #3deaa4;
+  animation: bar7 1s ease;
+}
+@keyframes bar7 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 95%;
+  }
+}
+.bar-8 {
+  width: 90%;
+  height: 7px;
+  margin-bottom: 50px;
+  background-color: #3deaa4;
+  animation: bar8 1s ease;
+}
+@keyframes bar8 {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 90%;
+  }
+}
+
+.circle {
+  position: absolute;
+  top: 10px;
+  left: -10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #3deaa4;
+}
+.circle2 {
+  position: absolute;
+  top: 200px;
+  left: -10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #3deaa4;
+}
+.edu-wrapper .row .edu::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: -3px;
+  width: 1px;
+  height: 0px;
+  background-color: #3deaa4;
+  z-index: -1;
+  transition: all 0.3s ease;
+}
+.edu-wrapper .edu:hover::before {
+  height: 175px;
+}
+.exp {
+  border: 1px solid #4e4e4e;
+  color: #cccccc;
+}
+.exp:hover {
+  border: 1px solid #3deaa4;
+}
+.exp::before {
+  content: "";
+  position: absolute;
+  top: 45%;
+  bottom: 50%;
+  left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #4e4e4e;
+}
+.exp:hover::before {
+  background-color: #3deaa4;
+}
+.c-ico {
+  color: #3deaa4;
+}
+.form {
+  background-color: #111318;
+  border: 1px solid #bebebe;
+  color: #ebebeb;
+}
+.submit-btn {
+  background-color: #226950;
+  border: 1px solid #226950;
+  height: 50px;
+  color: #bebebe;
+  transition: 0.3s ease;
+  font-weight: bolder;
+}
+.submit-btn:hover {
+  background-color: #3deaa4;
+  color: black;
+}
+.footer-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.footer-wrapper a {
+  text-decoration: none;
+  color: #7e7e7e;
+}
+.footer-wrapper a:hover {
+  color: #3deaa4;
+}
+@media (max-width: 800px) {
+  .wrapper {
+    display: none;
+  }
+  .wrapper.active {
+    display: initial;
+  }
+  .main-wrapper {
+    width: 100%;
+  }
+  .hireme-btn {
+    display: none;
+  }
+  .toggler {
+    display: initial;
+  }
+}
+@media (max-width: 400px) {
+}
