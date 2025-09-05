@@ -86,7 +86,7 @@ body {
   content: '✦';
   position: absolute;
   bottom: 10px;
-  left: 8rem;
+  left: 9rem;
   padding: 0;
   margin: 0;
   font-size: 1.5rem;
@@ -100,7 +100,7 @@ body {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(180deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -439,6 +439,7 @@ hr {
 .exp {
   border: 1px solid #4e4e4e;
   color: #cccccc;
+  min-width: 20rem;
 }
 .exp:hover {
   border: 1px solid #3deaa4;
@@ -473,6 +474,11 @@ hr {
   transition: 0.3s ease;
   font-weight: bolder;
 }
+input:focus,
+textarea:focus {
+  outline: 2px solid #3deaa4;
+}
+
 .submit-btn:hover {
   background-color: #3deaa4;
   color: black;
